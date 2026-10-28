@@ -1,0 +1,12 @@
+services:
+  keeps:
+    build: .
+    container_name: keeps
+    restart: unless-stopped
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./data:/data
+    environment:
+      - DATA_DIR=/data
+      - TZ=Asia/Shanghai

@@ -1,0 +1,19 @@
+.trend-board{overflow-anchor:none}
+.trend-board-toolbar{display:flex;align-items:center;justify-content:space-between;min-height:32px;margin:-8px 0 16px;gap:12px}
+.trend-board-toolbar button{font-size:13px}
+.trend-widget-grid{display:grid;position:relative;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;grid-auto-rows:300px;align-items:stretch}
+.trend-widget{position:relative;min-width:0;min-height:0;touch-action:pan-y;grid-column:var(--widget-column);grid-row:var(--widget-row)/span var(--widget-span)}
+.trend-widget .widget-content>.card{margin:0;min-width:0;height:100%;box-sizing:border-box}
+.trend-widget .widget-content{height:100%;min-height:0}
+.trend-widget-grid.is-editing>.trend-widget{touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;cursor:grab}
+.trend-widget-grid.is-editing .widget-content{pointer-events:none}
+.trend-widget-grid.is-editing .widget-content>.card{outline:1px dashed var(--muted);outline-offset:3px}
+.widget-placeholder>.widget-content{opacity:.16}
+.widget-remove{position:absolute;top:-9px;left:-9px;z-index:3;display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--text);box-shadow:0 2px 8px #0001;touch-action:none}
+.widget-grip{position:absolute;right:9px;top:-12px;z-index:3;width:30px;height:26px;display:grid;place-items:center;background:var(--card);color:var(--muted);border:1px solid var(--line);border-radius:8px;cursor:grab;touch-action:pan-y}
+.trend-widget-ghost{pointer-events:none!important;z-index:5000;opacity:.94;box-shadow:0 16px 40px #0003;border-radius:20px;will-change:transform;overflow:hidden}
+.trend-widget-ghost .widget-remove,.trend-widget-ghost .widget-grip{display:none}
+.widget-add{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:24px 0 0;min-height:44px}
+.widget-catalog{display:flex;flex-wrap:wrap;gap:10px;padding:16px 0}
+.widget-catalog .btn{display:flex;gap:6px;align-items:center}
+@media(max-width:800px){.trend-widget-grid{grid-template-columns:minmax(0,1fr)}.trend-widget{grid-column:1;grid-row:auto/span var(--widget-span)}.trend-board-toolbar{margin-top:0}.widget-remove{width:30px;height:30px;left:-6px;top:-10px}}

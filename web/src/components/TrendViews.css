@@ -1,0 +1,82 @@
+.trend-view { min-width:0; }
+.trend-totals { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:18px 0 26px; }
+.trend-totals>div { display:flex;flex-direction:column;gap:7px;min-width:0; }
+.trend-totals span { color:var(--muted);font-size:12px; }
+.trend-totals strong { font-size:clamp(18px,2.2vw,28px);font-weight:600;letter-spacing:-.6px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere; }
+.trend-key { display:flex;align-items:center;flex-wrap:wrap;gap:16px;font-size:12px;margin:8px 0 12px; }
+.trend-key>span { display:inline-flex;align-items:center;gap:6px; }
+.trend-key i { width:8px;height:8px;border-radius:3px; }
+.trend-key b {font-variant-numeric:tabular-nums;}
+.trend-plot { width:100%;min-width:0; }
+.trend-plot svg { display:block;overflow:visible; }
+.trend-plot svg text { fill:var(--muted);font-size:10px;font-family:inherit;font-variant-numeric:tabular-nums; }
+.trend-chart-hit { cursor:pointer; }
+.trend-chart-hit:hover { fill:var(--accent);fill-opacity:.045; }
+.trend-chart-hit:focus-visible { outline:1px solid var(--accent); }
+.trend-empty { min-height:180px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;text-align:center;padding:24px; }
+.trend-data-note { color:var(--muted);font-size:11px;line-height:1.6;margin:12px 0 0; }
+.trend-month-select { display:flex;justify-content:flex-end;font-size:12px;color:var(--muted); }
+.trend-month-select label { display:flex;align-items:center;gap:10px; }
+.trend-month-select select { max-width:150px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);padding:6px 8px; }
+.trend-month-detail { border-top:1px solid var(--line);margin-top:16px;padding-top:12px;max-height:280px;overflow:auto; }
+.trend-detail-heading { display:flex;justify-content:space-between;align-items:center;font-size:13px; }
+.trend-event { display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--text);font-size:13px; }
+.trend-event>span { min-width:0;overflow-wrap:anywhere; }
+.trend-event small { display:block;color:var(--muted);margin-top:4px;font-size:11px; }
+.trend-event strong { white-space:nowrap;font-weight:500; }
+.trend-goal-counts { display:flex;gap:24px;flex-wrap:wrap;margin:16px 0 24px; }
+.trend-goal-counts>span { display:flex;flex-direction:column;gap:5px;font-size:11px;color:var(--muted); }
+.trend-goal-counts b { font-size:24px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums; }
+.trend-goal-list { max-height:280px;overflow:auto; }
+.trend-goal { display:block;padding:12px 0;text-decoration:none;color:var(--text);border-top:1px solid var(--line); }
+.trend-goal>div:first-child { display:flex;justify-content:space-between;gap:12px;font-size:13px; }
+.trend-goal strong { font-weight:500;overflow-wrap:anywhere; }
+.trend-goal span { color:var(--muted);font-variant-numeric:tabular-nums; }
+.trend-goal small { font-size:11px;color:var(--muted); }
+.trend-progress { height:4px;border-radius:3px;background:var(--line);overflow:hidden;margin:9px 0 7px; }
+.trend-progress i { display:block;height:100%;border-radius:inherit;background:var(--accent); }
+@media(max-width:600px){.trend-totals{gap:12px;margin:18px 0 22px}.trend-totals strong{font-size:19px}.trend-key{gap:12px}.trend-goal-counts{gap:20px}.trend-month-select select{font-size:16px}.trend-view .card-title{gap:8px}.trend-view .card-title .small{font-size:11px}.trend-plot svg text{font-size:10px}}
+
+/* Widget contents fit the two board sizes; long lists scroll inside their card. */
+.trend-widget .widget-content>.card{display:flex;flex-direction:column;padding:20px;overflow:hidden;box-sizing:border-box}
+.trend-widget .card-title{flex:none;margin-bottom:12px;min-height:22px}
+.trend-widget .trend-plot{flex:1;min-height:0;overflow:hidden}
+.trend-widget .trend-plot svg{overflow:hidden}
+.trend-widget .trend-plot>.trend-empty{height:100%;min-height:0}
+.trend-widget .trend-key{flex:none;margin:0 0 10px;gap:10px}
+.trend-widget .trend-data-note{flex:none;font-size:10px;margin-top:10px}
+.trend-widget .trend-totals{flex:none;margin:8px 0 20px;gap:12px}
+.trend-widget .trend-totals strong{font-size:clamp(18px,1.8vw,25px)}
+.trend-widget .trend-month-select{flex:none;margin-top:12px}
+.trend-widget .trend-month-detail{flex:0 1 150px;min-height:80px;margin-top:12px;overscroll-behavior:contain}
+.trend-widget .trend-goal-counts{flex:none;margin:4px 0 12px;gap:16px}
+.trend-widget .trend-goal-list{flex:1;min-height:0;max-height:none;overscroll-behavior:contain;scrollbar-width:thin}
+.trend-widget .trend-ranking-list{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.trend-widget .rank-row{padding:8px 0;gap:8px}
+.trend-widget .rank-index{flex:none}
+.trend-widget .rank-name{min-width:0;overflow-wrap:anywhere}
+.trend-widget .rank-cost{flex:none}
+.trend-widget .donut-wrap{flex:1;min-height:0;gap:16px}
+.trend-widget .donut-wrap>svg{width:clamp(85px,10vw,150px);height:auto;flex:none}
+.trend-widget .donut-legend{min-width:0}
+.trend-widget .legend-row{flex-wrap:wrap;gap:6px}
+.trend-widget .legend-row em{min-width:0}
+.trend-widget .category-pie-layout{flex:1;min-height:0;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.trend-widget .category-pie-visual{min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.trend-widget .category-pie{flex:1;min-height:0;width:100%;height:100%;max-width:230px}
+.trend-widget .category-pie-detail{flex:none;margin-top:0}
+.trend-widget .category-pie-legend{max-height:none;height:100%;min-height:0}
+.trend-widget .trend-empty{flex:1;min-height:0}
+@media(max-width:440px){
+ .trend-widget .widget-content>.card{padding:18px}
+ .trend-widget .card-title{font-size:13px;gap:8px}
+ .trend-widget .card-title .small{font-size:10px}
+ .trend-widget .trend-totals strong{font-size:clamp(12px,4vw,18px);letter-spacing:-.4px}
+ .trend-widget .donut-wrap{gap:12px}
+ .trend-widget .donut-wrap>svg{width:90px}
+ .trend-widget .legend-row{font-size:11px}
+}
+.trend-widget .category-pie-visual{height:100%;box-sizing:border-box}
+
+.trend-loading{min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--muted);font-size:13px}
+.trend-loading p{margin:0}
