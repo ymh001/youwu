@@ -36,7 +36,7 @@
     "backend/tests/test_wish_order.py": "47057c5272e3eaf02e8339ec27b61bbe22d3cf43a1a4d6d578a4db2ff29a55aa",
     "docker-compose.yml": "51454dee020f1aef5270c54724ce51aaa6001c76cd6ba7debf8673bcf40380d4",
     "docs/data-and-backup.md": "64a051edc97ab1aae69717736a81dd22febbc190318ad062166f1500e5f1f9d5",
-    "docs/deployment.md": "a3b654d4455bf47f1263df846074aaeb0dbba4185394e0b9fb10322093a13471",
+    "docs/deployment.md": "0a8a430a3e61306fd569065b8658e2e2507d9dfc0782a1646d6c32688791693e",
     "web/index.html": "225b56c44c1f1b33ec911bff2bac212c3d00034a1836d95267a155bae26d2c34",
     "web/package-lock.json": "4f7c67aea2c1dee34d0333a05c3ea8644ae68048329560f9377ee9b23c65b234",
     "web/package.json": "9e431fca50911a64114e73b270dee2c664f475848443506dcb666103254e7b64",
